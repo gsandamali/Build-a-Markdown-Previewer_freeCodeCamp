@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!--React CDN Links-->
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+        <!-- Load Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <title>Build a Markdown Previewer</title>
+        <script src="./JavaScript/main.js"></script>
+        <script src="./JavaScript/marked.js"></script>
+        <link rel="stylesheet" href="style.css">
+       
+        
+        
+    </header>
+
+    <body onload="setDefault()">
+        <!--content within a given device or viewport-->
+        <div class="container-fluid ">
+            <h1>Markdown Previewer</h1>
+            <div class="row">
+                
+                <div class="col-6 border border-success ">
+                    <h3 class="text-sm-start fw-bold bg-primary.bg-gradient bg-success p-2">Editor</h3>
+                    <div class="form-group">
+                        <textarea id="editor" class="bg-success p-2 form-control d-flex align-items-stretch" rows="25" style="--bs-bg-opacity: .2; min-width: 100%" onkeyup="updatePrereview()"> </textarea>
+                    </div>
+                </div>
+
+                <div class="col-6 border border-success">
+                  <h3 class="text-sm-start fw-bold bg-primary bg-success p-2">Previewer</h3>
+                  <div id="preview" class="container-fluid vh-100" style="overflow: scroll;"></div>
+                </div> 
+            </div>
+        </div>
+        
+
+
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+    <footer>
+        Converts and previews markdown files (.md, .markdown) to HTML
+    </footer>
+</html>
